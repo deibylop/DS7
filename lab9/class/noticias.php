@@ -18,7 +18,7 @@ class noticias extends modeloCredencialesDB
     {
         $instruccion = 'CALL sp_listar_noticias()';
         $consulta = $this->_db->query($instruccion);
-        $resultado = $consulta->fetch_all(MYSQL_ASSOC);
+        $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
 
         if (!$resultado) {
             echo 'Fallo al consultar las noticias';

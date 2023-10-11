@@ -26,27 +26,26 @@
             <th>Fecha</th>
             <th>Imagen</th>
             </tr>';
+
         foreach ($noticias as $resultado) {
-            echo '<tr> 
+            print('<tr> 
                 <td>' . $resultado['titulo'] . '</td><br/>' .
                 '<td>' . $resultado['texto'] . '</td><br/>' .
                 '<td>' . $resultado['categoria'] . '</td><br/>' .
-                '<td>' . date('j/n/Y'), strtotime($resultado['fecha']) . '</td><br/>';
+                '<td>' . date('j/n/Y') . strtotime($resultado['fecha']) . '</td><br/>');
 
             if ($resultado['imagen'] != "") {
                 print("<td> 
-                    <a target='_blank' href='img/" . $resultado['imagen'] . "'>
-                    <img border='0' src=img/iconotexto.gif>
+                    <a target='_blank' href='src/img/" . $resultado['imagen'] . "'>
+                    <img border='0' src=src/img/iconotexto.gif>
                     </a>
-                    </td>");
+                    </td> <br>");
             } else {
                 print("<td>&nbsp;</td>");
             }
-
-            echo '
-             </tr>
-             </table>';
+            print('</tr>');
         }
+        print('</table>');
     }
     ?>
 
