@@ -10,7 +10,7 @@ class modeloCredencialesDB{
         if($this->_db->connect_errno)
         {
             echo 'Fallo la conexion';
-            return; 
+            return;
         }
     }
 }
